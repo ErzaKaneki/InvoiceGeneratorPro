@@ -168,8 +168,8 @@ class Invoice:
     @property
     def is_overdue(self) -> bool:
         """Check if invoice is overdue"""
-        return (self.status in ["Sent"] and 
-                self.due_date and 
+        return (self.status == "Sent" and 
+                self.due_date is not None and 
                 datetime.now().date() > self.due_date.date())
     
     @property
@@ -216,9 +216,9 @@ class Invoice:
         """Create invoice from dictionary"""
         # Handle datetime fields
         datetime_fields = ['invoice_date', 'due_date', 'created_date', 'updated_date']
-        for field in datetime_fields:
-            if data.get(field):
-                data[field] = datetime.fromisoformat(data[field])
+        for field_name in datetime_fields:
+            if data.get(field_name):
+                data[field_name] = datetime.fromisoformat(data[field_name])
         
         # Handle items JSON
         items_data = data.pop('items', '[]')

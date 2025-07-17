@@ -2,7 +2,6 @@
 # Location: InvoiceGeneratorPro/utils/validators.py
 
 import re
-from typing import Union, Optional
 from email_validator import validate_email, EmailNotValidError
 
 from config import (
@@ -51,7 +50,7 @@ class InputValidator:
         
         try:
             # Use email-validator library for robust validation
-            validated_email = validate_email(email.strip())
+            validate_email(email.strip())
             return True, ""
         except EmailNotValidError:
             return False, ERROR_MESSAGES["invalid_email"]

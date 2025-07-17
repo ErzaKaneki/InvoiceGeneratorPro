@@ -2,7 +2,6 @@
 # Location: InvoiceGeneratorPro/config.py
 
 import os
-from pathlib import Path
 
 # Application Information
 APP_NAME = "Invoice Generator Pro"

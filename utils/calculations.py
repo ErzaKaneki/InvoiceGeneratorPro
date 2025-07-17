@@ -3,7 +3,7 @@
 
 import re
 from decimal import Decimal, ROUND_HALF_UP
-from typing import Union, List
+from typing import Union, List, Optional
 from datetime import datetime, timedelta
 
 from config import CURRENCY_SYMBOLS, DEFAULT_TAX_RATES, MIN_AMOUNT, MAX_AMOUNT
@@ -174,7 +174,7 @@ class DateCalculator:
         return datetime.now().date() > due_date.date()
     
     @staticmethod
-    def format_date_for_display(date_obj: datetime, format_str: str = "%B %d, %Y") -> str:
+    def format_date_for_display(date_obj: Optional[datetime], format_str: str = "%B %d, %Y") -> str:
         """Format date for display"""
         if not date_obj:
             return ""

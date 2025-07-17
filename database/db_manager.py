@@ -2,15 +2,12 @@
 # Location: InvoiceGeneratorPro/database/db_manager.py
 
 import sqlite3
-import os
-import json
 from datetime import datetime
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from contextlib import contextmanager
 
-from .models import Client, Invoice, InvoiceItem, AppSettings
-from config import DATABASE_PATH, ERROR_MESSAGES, SUCCESS_MESSAGES
-
+from .models import Client, Invoice, AppSettings
+from config import DATABASE_PATH, ERROR_MESSAGES
 class DatabaseManager:
     """Handles all database operations for Invoice Generator Pro"""
     
