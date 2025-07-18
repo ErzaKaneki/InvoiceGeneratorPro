@@ -36,13 +36,15 @@ class ModernTemplate(InvoiceTemplate):
     """Modern, clean template with blue accent colors"""
     
     def __init__(self):
+        # Set colors first, before calling super().__init__
+        self.primary_color = colors.HexColor('#2E86AB')
+        self.secondary_color = colors.HexColor('#2C3E50')
+        self.accent_color = colors.HexColor('#ECF0F1')
+        
         super().__init__(
             name="Modern Professional",
             description="Clean, modern design with blue accents and minimal styling"
         )
-        self.primary_color = colors.HexColor('#2E86AB')
-        self.secondary_color = colors.HexColor('#2C3E50')
-        self.accent_color = colors.HexColor('#ECF0F1')
     
     def _setup_styles(self):
         """Setup modern template styles"""
@@ -276,13 +278,15 @@ class ClassicTemplate(InvoiceTemplate):
     """Traditional, formal template with elegant styling"""
     
     def __init__(self):
+        # Set colors first, before calling super().__init__
+        self.primary_color = colors.HexColor('#1C2833')
+        self.secondary_color = colors.HexColor('#34495E')
+        self.accent_color = colors.HexColor('#D5DBDB')
+        
         super().__init__(
             name="Classic Elegant",
             description="Traditional business design with formal styling and elegant typography"
         )
-        self.primary_color = colors.HexColor('#1C2833')
-        self.secondary_color = colors.HexColor('#34495E')
-        self.accent_color = colors.HexColor('#D5DBDB')
     
     def _setup_styles(self):
         """Setup classic template styles"""
@@ -480,13 +484,15 @@ class MinimalTemplate(InvoiceTemplate):
     """Minimal, clean template with lots of white space"""
     
     def __init__(self):
+        # Set colors first, before calling super().__init__
+        self.primary_color = colors.HexColor('#000000')
+        self.secondary_color = colors.HexColor('#666666')
+        self.accent_color = colors.HexColor('#F5F5F5')
+        
         super().__init__(
             name="Minimal Clean",
             description="Ultra-clean design with minimal colors and maximum white space"
         )
-        self.primary_color = colors.HexColor('#000000')
-        self.secondary_color = colors.HexColor('#666666')
-        self.accent_color = colors.HexColor('#F5F5F5')
     
     def generate_pdf(self, invoice: Invoice, output_path: str) -> str:
         """Generate minimal template PDF"""

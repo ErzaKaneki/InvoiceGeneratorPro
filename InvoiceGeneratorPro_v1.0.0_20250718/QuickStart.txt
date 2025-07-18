@@ -1,0 +1,30 @@
+# Quick Start Guide
+
+1. FIRST TIME SETUP:
+   - Double-click InvoiceGeneratorPro.exe
+   - Sample data will be created automatically
+   - Explore the features with the sample clients and invoices
+
+2. ADD YOUR COMPANY INFO:
+   - Go to Settings tab
+   - Fill in your company information
+   - This will appear on all your invoices
+
+3. CREATE YOUR FIRST CLIENT:
+   - Go to Clients tab
+   - Click "New Client"
+   - Fill in client details
+
+4. CREATE YOUR FIRST INVOICE:
+   - Go to Invoices tab
+   - Click "New Invoice"
+   - Select your client
+   - Add invoice items
+   - Save and generate PDF
+
+5. DASHBOARD:
+   - View your business statistics
+   - Track revenue and overdue invoices
+   - Quick access to recent invoices
+
+That's it! You're ready to generate professional invoices.
